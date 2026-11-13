@@ -1,0 +1,50 @@
+# Grid Navigation Minesweeper — Environment Configuration
+
+environments:
+  env1:
+    id: GridNavMinesweeper-v1
+    grid_size: [8, 6]       # (width, height)
+    num_mines: 6
+    difficulty: 1
+    sidewalks: true
+    random_mines: false
+    max_steps: null          # auto = width × height × 2
+
+  env2:
+    id: GridNavMinesweeper-v2
+    grid_size: [8, 6]
+    num_mines: 6
+    difficulty: 2
+    sidewalks: false
+    random_mines: false
+
+  env3:
+    id: GridNavMinesweeper-v3
+    grid_size: [8, 6]
+    num_mines: 6
+    difficulty: 3
+    sidewalks: false
+    random_mines: true       # new mine layout each episode
+
+  env4:
+    id: GridNavMinesweeper-v4
+    grid_size: [12, 10]
+    num_mines: 15
+    difficulty: 4
+    sidewalks: false
+    random_mines: true
+    num_black_holes: 4
+    black_hole_trap_steps: 3
+
+rewards:
+  goal: 100
+  mine_hit: -100
+  wall_hit: -2
+  safe_step: 1
+  timeout: -50
+  step_penalty: -0.5
+  correct_flag: 2
+  wrong_flag: -1
+  revisit: -0.5
+  black_hole_per_step: -2
+
