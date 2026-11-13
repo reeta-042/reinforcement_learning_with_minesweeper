@@ -8,7 +8,7 @@ An experimental reinforcement learning framework investigating **curriculum tran
 
 In standard reinforcement learning, agents often struggle with sample efficiency and partial observability (POMDPs). This project investigates:
 1. **Curriculum Transfer Learning**: Whether spatial sensory representations learned in simpler navigation tasks accelerate learning in harder, hazard-dense environments with fewer training episodes.
-2. **Schema Learning**: How value-based neural networks construct internal topographic cognitive maps ($V(s) = \max_a Q(s, a)$) to navigate safe corridors and avoid hazards.
+2. **Schema Learning**: How value-based neural networks construct internal topographic cognitive maps ($V(s)$ = max_a Q(s, a)) to navigate safe corridors and avoid hazards.
 3. **Catastrophic Forgetting**: Measuring backward retention when an agent adapts to new environment rules.
 4. **Recurrent Working Memory (DRQN / Meta-RL)**: How augmenting Q-learning with an internal LSTM belief state enables sequential in-context reasoning, zero-shot inference, and one-shot hazard adaptation with frozen weights.
 
